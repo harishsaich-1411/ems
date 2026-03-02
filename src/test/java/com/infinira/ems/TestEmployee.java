@@ -7,14 +7,12 @@ import com.infinira.ems.common.MvcRequestTemplate;
 import org.junit.jupiter.api.*;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.test.context.ActiveProfiles;
 import java.text.MessageFormat;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-@ActiveProfiles("test")
 @AutoConfigureMockMvc
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -31,15 +29,6 @@ public class TestEmployee extends MvcRequestTemplate {
     private static Employee employee;
     private static int empId;
     private static int deptId;
-
-    @BeforeAll
-    public void createDepartmentForEmployee() {
-    Department dept = new Department();
-    dept.setDeptName("EmpDept-" + System.currentTimeMillis());
-    dept.setLocation("Hyderabad");
-    String response = postRequest(CREATE_DEPT, dept, MSG_0018);
-    deptId = Integer.parseInt(response.trim());
-    }
 
 
     @Test
@@ -126,7 +115,7 @@ public class TestEmployee extends MvcRequestTemplate {
         employee.setIdentityMarks("Mole on left eye");
         employee.setNationalId("NID" + System.currentTimeMillis());
         employee.setSalary(50000);
-        employee.setDeptId(deptId);
+        employee.setDeptId(3);
         return employee;
     }
 
