@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.infinira.ems.TestEmployee" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-03-02T10:19:00.252Z" hostname="LAPTOP-4U59MU2L" time="0.23">
+  <properties/>
+  <testcase name="testCreateEmployee()" classname="com.infinira.ems.TestEmployee" time="0.041"/>
+  <testcase name="testGetEmployee()" classname="com.infinira.ems.TestEmployee" time="0.042"/>
+  <testcase name="testGetAllEmployees()" classname="com.infinira.ems.TestEmployee" time="0.037"/>
+  <testcase name="testUpdateEmployee()" classname="com.infinira.ems.TestEmployee" time="0.065"/>
+  <testcase name="testDeleteEmployee()" classname="com.infinira.ems.TestEmployee" time="0.035"/>
+  <system-out><![CDATA[2026-03-02T15:49:00.257+05:30  INFO 39436 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.infinira.ems.TestEmployee]: TestEmployee does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-02T15:49:00.259+05:30  INFO 39436 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.infinira.ems.EmsApplication for test class com.infinira.ems.TestEmployee
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

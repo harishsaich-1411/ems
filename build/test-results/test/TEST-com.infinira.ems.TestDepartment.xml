@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.infinira.ems.TestDepartment" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-03-02T10:18:56.537Z" hostname="LAPTOP-4U59MU2L" time="3.711">
+  <properties/>
+  <testcase name="testCreateDepartment()" classname="com.infinira.ems.TestDepartment" time="1.352"/>
+  <testcase name="testGetDepartment()" classname="com.infinira.ems.TestDepartment" time="0.063"/>
+  <testcase name="testGetAllDepartments()" classname="com.infinira.ems.TestDepartment" time="0.149"/>
+  <testcase name="testUpdateDepartment()" classname="com.infinira.ems.TestDepartment" time="0.205"/>
+  <testcase name="testDeleteDepartment()" classname="com.infinira.ems.TestDepartment" time="0.04"/>
+  <system-out><![CDATA[15:48:56.655 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.infinira.ems.TestDepartment]: TestDepartment does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:48:56.759 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.infinira.ems.EmsApplication for test class com.infinira.ems.TestDepartment
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+2026-03-02T15:48:57.190+05:30  INFO 39436 --- [    Test worker] com.infinira.ems.TestDepartment          : Starting TestDepartment using Java 21.0.5 with PID 39436 (started by haris in H:\projects\ems-root\ems)
+2026-03-02T15:48:57.192+05:30  INFO 39436 --- [    Test worker] com.infinira.ems.TestDepartment          : No active profile set, falling back to 1 default profile: "default"
+2026-03-02T15:48:58.065+05:30  INFO 39436 --- [    Test worker] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-03-02T15:48:58.386+05:30  INFO 39436 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-03-02T15:48:58.388+05:30  INFO 39436 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-03-02T15:48:58.389+05:30  INFO 39436 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-03-02T15:48:58.419+05:30  INFO 39436 --- [    Test worker] com.infinira.ems.TestDepartment          : Started TestDepartment in 1.47 seconds (process running for 2.579)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\haris\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.15.11\a38b16385e867f59a641330f0362ebe742788ed8\byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
