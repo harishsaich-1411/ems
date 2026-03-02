@@ -1,6 +1,7 @@
 package com.infinira.ems;
 
 import com.infinira.ems.model.Employee;
+import com.infinira.ems.model.Department;
 import com.infinira.ems.common.MvcRequestTemplate;
 
 import org.junit.jupiter.api.*;
@@ -16,6 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @ActiveProfiles("test")
 @AutoConfigureMockMvc
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class TestEmployee extends MvcRequestTemplate {
 
     private static final String BASE = "/ems";
@@ -24,9 +26,21 @@ public class TestEmployee extends MvcRequestTemplate {
     private static final String GET_ALL_EMP = BASE + "/getEmployees";
     private static final String UPDATE_EMP = BASE + "/updateEmployee/{0}";
     private static final String DELETE_EMP = BASE + "/deleteEmployee/{0}";
+    private static final String CREATE_DEPT = BASE+ "/createDepartment";
 
     private static Employee employee;
     private static int empId;
+    private static int deptId;
+
+    @BeforeAll
+    public void createDepartmentForEmployee() {
+    Department dept = new Department();
+    dept.setDeptName("EmpDept-" + System.currentTimeMillis());
+    dept.setLocation("Hyderabad");
+    String response = postRequest(CREATE_DEPT, dept, MSG_0018);
+    deptId = Integer.parseInt(response.trim());
+    }
+
 
     @Test
     @Order(1)
@@ -112,7 +126,7 @@ public class TestEmployee extends MvcRequestTemplate {
         employee.setIdentityMarks("Mole on left eye");
         employee.setNationalId("NID" + System.currentTimeMillis());
         employee.setSalary(50000);
-        employee.setDeptId(3);
+        employee.setDeptId(deptId);
         return employee;
     }
 
@@ -133,4 +147,5 @@ public class TestEmployee extends MvcRequestTemplate {
     private static final String MSG_0015 = "Employee last Name mismatch";
     private static final String MSG_0016 = "Employee email mismatch";
     private static final String MSG_0017 = "Employee phone number mismatch";
+    private static final String MSG_0018 = "Failed to create Department";
 }
